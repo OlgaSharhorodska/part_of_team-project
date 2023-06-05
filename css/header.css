@@ -1,88 +1,12 @@
-/* ===========GENERAL============= */
-
-button {
-    cursor: pointer;
-}
-
-.link {
-    text-decoration: none;
-    list-style-type: none;
-}
-
-.list {
-    list-style-type: none;
-    font-style: normal;
-    padding: 0;
-    margin: 0;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    margin: 0;
-}
-
-ul,
-ol {
-    margin: 0;
-    padding: 0;
-}
-
-img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-
-/* ============ Container ============== */
-
-.container {
-    max-width: 375px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media screen and (min-width: 768px) {
-    .container {
-    max-width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .container {
-    max-width: 1200px;
-    
-    }
-}
-
-
 /* ====== Mobile + tablet menu burger ======= */
 
-@media only screen and (min-width: 320px) 
-and (max-width: 1199px) 
-   {
-   .site-nav {
+@media only screen and (min-width: 320px) and (max-width: 1199px) {
+    .site-nav {
         display: flex;
     }
 
     .mobile-burger-menu {
         margin-left: auto;
-
     }
 
     .menu-toggle-burger {
@@ -134,8 +58,8 @@ and (max-width: 1199px)
         flex-direction: column;
         position: fixed;
         top: 0;
-        left: 0;
-        width: 100vw;
+        right: 0;
+        width: 70vw;
         height: 100vh;
         padding-top: 136px;
         padding-left: 32px;
@@ -161,95 +85,98 @@ and (max-width: 1199px)
         text-decoration: none;
         list-style-type: none;
         margin-bottom: auto;
-        margin-left: 85px;
+        margin-left: 18px;
     }
 
     .mobile-menu-item {
-        font-family: 'Montserrat';
-        font-style: normal;
         font-weight: 500;
-        font-size: 14px;
         line-height: 1.14;
-
-        letter-spacing: -0.02em;
-        color: #FFFFFF;
+        color: var(--secondary-txt-cl);
         text-align: left;
     }
 
+    .social-media-item {
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
     .active-link {
-        color: #FD9222;
+        color: var(----accent-txt-cl);
     }
-    
-  }
+}
 
-  @media only screen and (min-width: 768px) 
-     {
+@media only screen and (min-width: 768px) {
+
+    .mobile-menu {
+        margin-left: 53px;
+    }
+}
+
+.svg-header {
+    fill: none;
+    stroke: rgba(255, 255, 255, 1);
+}
+
+.svg-header:hover,
+.svg-header:focus {
+    stroke: rgba(253, 146, 34, 1);
+}
+
+.mobile-menu-item:hover,
+.mobile-menu-item:focus {
+    color: rgba(253, 146, 34, 1);
+}
+
+@media only screen and (min-width: 768px) {
     .menu-container {
-            padding-top: 156px;
-            padding-left: 32px;
-            padding-bottom: 24px;
-            padding-right: 85px;
-            
-        }
+        padding-top: 156px;
+        padding-left: 32px;
+        padding-bottom: 24px;
+        padding-right: 85px;
     }
-  
-  /* ======================================== */
-
-
-
+}
 
 /* =============HEADER-MAIN==================== */
 
-@media screen and (min-width:320px) and (max-width:1199px)
-{
+@media screen and (min-width:320px) {
     .header {
         height: 70px;
-        padding: 25px 25px;
+        padding: 25px 0px 20px 0px;
         display: flex;
     }
+
     .header-nav {
-    display: none;
-}
+        display: none;
+    }
 
     .header-social-media-list {
-    display: none;
-}
-}
-
-    .logo-accent {
-        font-family: 'Montserrat';
-        font-style: italic;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 1.29;
-        letter-spacing: -0.03em;
-        color: #111111;
-        text-decoration: none;
+        display: none;
     }
+}
 
-    .logo-main {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 1.29;
-        letter-spacing: -0.03em;
-        color: #111111;
-        text-decoration: none;
-    }
+.logo-accent {
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(----main-txt-cl);
+    text-decoration: none;
+}
 
+.logo-header {
+    margin-left: 4px;
+}
 
+.logo-main {
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--main-txt-cl);
+    text-decoration: none;
+}
 
-@media only screen and (min-width: 768px)  
-   {
+@media only screen and (min-width: 768px) {
     .header {
         height: 80px;
-        padding: 32px 32px;
     }
-    
-  }
-
+}
 
 @media screen and (min-width: 1200px) {
 
@@ -258,17 +185,31 @@ and (max-width: 1199px)
     }
 
     .main-header {
-
         display: flex;
-        align-items: center; 
+        align-items: baseline;
         justify-content: center;
     }
 
-    .header
-    {
-        padding: 32px 0px 32px 0px;
-        margin-right: 190px;
-        margin-left: 32px;
+    .header {
+        margin-right: auto;
+    }
+
+    .logo-accent {
+        font-size: 18px;
+        line-height: 1.1;
+    }
+
+    .logo-main {
+        font-size: 18px;
+        line-height: 1.1;
+    }
+
+    .nav-item {
+        font-weight: 500;
+        line-height: 1.14;
+        display: flex;
+        align-items: center;
+        color: var(--main-txt-cl);
     }
 
     .header-nav {
@@ -288,132 +229,36 @@ and (max-width: 1199px)
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
-        color: rgba(17, 17, 17, 1);
+        color: var(----dark-txt-cl);
         text-decoration: none;
         list-style: none;
 
         display: block;
     }
 
-   .nav-item:hover,
-   .nav-item:focus {
-    color: rgba(253, 146, 34, 1);
-}
+    .nav-item:hover,
+    .nav-item:focus {
+        color: rgba(253, 146, 34, 1);
+    }
 
     .nav-item {
-    position: relative;
-    transition: color var(--transition-dur-func);
-        }
+        position: relative;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-    .header-social-media-list
-    {
-    display: flex;
-    gap: 20px;
+    .header-social-media-list {
+        display: flex;
+        gap: 20px;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
 
-.header-social-media-link:hover,
-.header-social-media-link:focus
-{
-   stroke: rgba(253, 146, 34, 1);
+.svg-header-black {
+    fill: none;
+    stroke: rgba(17, 17, 17, 1);
 }
 
-/* ================================== */
-
-.subscribe{
-background-image:url(../images/Subcribe.jpg);
-padding-top: 62px;
-padding-bottom: 62px;
-}
-
-.subscribe-title
-{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.2;
-    text-align: center;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-    color: #FFFFFF;
-
-    width: 291px;
-    height: 48px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 24px;
-}
-
-.subscribe-text
-{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.29;
-    text-align: center;
-    letter-spacing: -0.02em;
-
-    color: #FFFFFF;
-    width: 326px;
-    
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 24px;
-}
-
-.subscribe-btn
-{   display: block;
-    width: 128px;
-    height: 41px;
-    background-color: rgba(253, 146, 34, 1);
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 100px;
-    border-color: transparent;
-    margin-right: auto;
-    margin-left: auto;
-
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.2;
-    color: #FFFFFF;
-
-}
-
-@media only screen and (min-width: 768px) 
-   {
-    .subscribe{
-    padding-top:72px;
-    padding-bottom:72px;
-  }
-
-  .subscribe-title
-  {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 1.17;
-    width: 378px;
-    height: 56px;
-    
-  }
-
-  .subscribe-text {
-      
-      width: 467px;
-
-  }
-
-  .subscribe-btn {
-    
-      width: 172px;
-      height: 50px;
-      font-size: 18px;
-      line-height: 1.2;
-     
-
-  }
+.svg-header-black:hover,
+.svg-header-black:focus {
+    stroke: rgba(253, 146, 34, 1);
 }
